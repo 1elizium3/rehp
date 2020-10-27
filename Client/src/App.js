@@ -3,19 +3,17 @@ import React from 'react';
 // import './App.css';
 import axios from 'axios';
 
-
 const App = (props) => {
   const [state, setState] = React.useState('');
 
   React.useEffect(() => {
     axios.get('/api/hello')
       .then(res => setState(res.data))
-      .catch(err => console.log(err))
   }, []);
 
   return (
     <div>
-      Home
+      Client Home
       <p>{state}</p>
     </div>
   );
