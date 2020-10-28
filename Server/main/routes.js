@@ -76,7 +76,7 @@ router.delete('/api/delete/post', (req, res, next) => {
        });
 });
 // Делаю запрос на добавление, чтобы добавить идентификатор пользователя, которому 
-// понравился пост, в like_user_id массив, затем мы увеличиваем likes счетчик на 1
+// понравился пост, в like_user_id массив, затем увеличиваю likes счетчик на 1
 router.put('/api/put/likes', (req, res, next) => {
   const uid = [ req.body.uid ];
   const post_id = String(req.body.post_id);
@@ -109,7 +109,7 @@ router.post('/api/post/commenttodb', (req, res, next) => {
                   console.log(query_err);
       });
 });
-// Редактирует существующий комментарий в БД
+// Редактирую существующий комментарий в БД
 router.put('/api/put/commenttodb', (req, res, next) => {
   const values = [ req.body.comment,
                    req.body.user_id, 
